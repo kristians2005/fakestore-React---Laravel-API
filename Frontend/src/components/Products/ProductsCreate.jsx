@@ -14,8 +14,6 @@ export default function ProductsCreate() {
         formData.append('rating', e.target[3].value);
         formData.append('description', e.target[4].value);
         formData.append('image', e.target[5].files[0]);
-
-        console.log(formData);
         
         try {
             const res = await axios.post('http://127.0.0.1:8000/api/products/store', formData);
@@ -25,6 +23,7 @@ export default function ProductsCreate() {
         } catch (error) {
             console.error(error);
         }
+        
     }
 
     return(

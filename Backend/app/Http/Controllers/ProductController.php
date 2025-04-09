@@ -20,9 +20,6 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-
-
-
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
@@ -44,7 +41,6 @@ class ProductController extends Controller
 
         return response()->json([
             'message' => 'success',
-            'product' => $product,
         ], 201);
     }
 
